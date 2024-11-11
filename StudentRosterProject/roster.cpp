@@ -1,6 +1,8 @@
 #include "roster.h"
 #include <iostream>
 #include <sstream>
+#include <vector>
+#include <string>
 
 // Constructor 
 Roster::Roster() : lastIndex(-1) {
@@ -67,7 +69,7 @@ void Roster::printAverageDaysInCourse(std::string studentID) const {
     std::cout << "Student with ID " << studentID << " not found. Please, try again." << std::endl;
 }
 
-// 
+
 void Roster::printInvalidEmails() const {
     for (int i = 0; i <= lastIndex; ++i) {
         std::string email = classRosterArray[i]->getEmailAddress();
@@ -78,6 +80,27 @@ void Roster::printInvalidEmails() const {
             email.find(' ') != std::string::npos) {
             std::cout << "Invalid email: " << email << std::endl;
         }
+    }
+}
+
+// Helper method to parse the string data and create student objects
+void Roster::parseAndAddStudent(const std::string& studentData) {
+    std::istringstream ss(studentData);
+    std::string item;
+    std::vector<std::string> items;
+
+    while (std::getline(ss, item, ',')) {
+        items.push_back(item);
+    }
+
+    if (items.size() == 9) {
+        DegreeProgram dp;
+        if (items[8] == "SECURITY") dp = DegreeProgram::SECURITY;
+        else if (items[8] == "NETWORK") dp = DegreeProgram::NETWORK;
+        else if (items[8] == "SOFTWARE") dp = DegreeProgram::SOFTWARE;
+
+        add(items[0], items[1], items[2], items[3], std::stoi(items[4]),
+            std::stoi(items[5]), std::stoi(items[6]), std::stoi(items[7]), dp);
     }
 }
 

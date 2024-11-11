@@ -25,5 +25,6 @@ public:
     void printAverageDaysInCourse(std::string studentID) const;
     void printInvalidEmails() const;
     void printByDegreeProgram(DegreeProgram degreeProgram) const;
+    void parseAndAddStudent(const std::string& studentData);
 
 };
