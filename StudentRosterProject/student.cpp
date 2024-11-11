@@ -8,14 +8,14 @@ Student::Student(
     std::string emailAddress, 
     int age, 
     
-    std::array<int, 3> daysToFinish, 
+    std::array<int, 3> daysToComplete, 
     DegreeProgram degreeProgram): 
     studentID(studentID), 
     firstName(firstName), 
     lastName(lastName),
     emailAddress(emailAddress), 
     age(age), 
-    daysToFinish(daysToFinish),
+    daysToComplete(daysToComplete),
     degreeProgram(degreeProgram) {}
 
     // Getter functions
@@ -24,7 +24,7 @@ Student::Student(
     std::string Student::getLastName() const { return lastName; }
     std::string Student::getEmailAddress() const { return emailAddress; }
     int Student::getAge() const { return age; }
-    std::array<int, 3> Student::getDaysToFinish() const { return daysToFinish; }
+    std::array<int, 3> Student::getDaysToComplete() const { return daysToComplete; }
     DegreeProgram Student::getDegreeProgram() const { return degreeProgram; }
 
     // Setter functions
@@ -33,7 +33,7 @@ Student::Student(
     void Student::setLastName(const std::string& lastName) { this->lastName = lastName; }
     void Student::setEmailAddress(const std::string& emailAddress) { this->emailAddress = emailAddress; }
     void Student::setAge(int age) { this->age = age; }
-    void Student::setDaysToFinish(const std::array<int, 3>& daysToComplete) { this->daysToFinish = daysToComplete; }
+    void Student::setDaysToComplete(const std::array<int, 3>& daysToComplete) { this->daysToComplete = daysToComplete; }
     void Student::setDegreeProgram(DegreeProgram degreeProgram) { this->degreeProgram = degreeProgram; }
 
     void Student::print() const {
@@ -41,9 +41,9 @@ Student::Student(
             << "First Name: " << firstName << "\t"
             << "Last Name: " << lastName << "\t"
             << "Age: " << age << "\t"
-            << "daysInCourse: {" << daysToFinish[0] << ", "
-            << daysToFinish[1] << ", "
-            << daysToFinish[2] << "} "
+            << "daysInCourse: {" << daysToComplete[0] << ", "
+            << daysToComplete[1] << ", "
+            << daysToComplete[2] << "} "
             << "Degree Program: ";
 
         // Switch statement to convert the DegreeProgram enum to a string for output.

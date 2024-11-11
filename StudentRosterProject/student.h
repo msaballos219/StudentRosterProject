@@ -13,7 +13,7 @@ private:
 	std::string lastName;
 	std::string emailAddress;
 	int age;
-	std::array<int, 3> daysToFinish;
+	std::array<int, 3> daysToComplete;
 	DegreeProgram degreeProgram;
 
 	// public variables
@@ -24,7 +24,7 @@ public:
 		std::string lastName,
 		std::string emailAddress,
 		int age,
-		std::array<int, 3> daysToFinish,
+		std::array<int, 3> daysToComplete,
 		DegreeProgram degreeProgram);
 
 	// assessors/getters
@@ -33,7 +33,7 @@ public:
 	std::string getLastName() const;
 	std::string getEmailAddress() const;
 	int getAge() const;
-	std::array<int, 3> getDaysToFinish() const;
+	std::array<int, 3> getDaysToComplete() const;
 	DegreeProgram getDegreeProgram() const;
 
 	// mutators/setters
@@ -42,7 +42,7 @@ public:
 	void setLastName(const std::string& lastName);
 	void setEmailAddress(const std::string& emailAddress);
 	void setAge(int age);
-	void setDaysToFinish(const std::array<int, 3>& daysToFinish);
+	void setDaysToComplete(const std::array<int, 3>& daysToComplete);
 	void setDegreeProgram(DegreeProgram degreeProgram);
 
 	void print() const;
