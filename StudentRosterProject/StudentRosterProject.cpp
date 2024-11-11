@@ -7,7 +7,7 @@
 
 int main() {
     // Prints out course information
-    std::cout << "Course Title: Scripting and Programming - Applications - C867" << std::endl;
+    std::cout << "Scripting and Programming - Applications - C867" << std::endl;
     std::cout << "Programming Language: C++" << std::endl;
     std::cout << "WGU Student ID: 011768283" << std::endl;
     std::cout << "Name: Melvin Saballos" << std::endl;
@@ -42,19 +42,19 @@ int main() {
     }
     std::cout << std::endl;
 
-    std::cout << "Showing students in degree program: SOFTWARE" << std::endl;
+    std::cout << "Here are the students in the degree program: SOFTWARE" << std::endl;
     classRoster.printByDegreeProgram(DegreeProgram::SOFTWARE);
     std::cout << std::endl;
 
-    std::cout << "Removing student with ID A3:" << std::endl;
+    std::cout << "Remove student with ID A3:" << std::endl;
     classRoster.remove("A3");
     std::cout << std::endl;
 
-    std::cout << "Displaying all students:" << std::endl;
+    std::cout << "Now, displaying all students:" << std::endl;
     classRoster.printAll();
     std::cout << std::endl;
 
-    std::cout << "Removing student with ID A3:" << std::endl;
+    std::cout << "Remove student with ID A3:" << std::endl;
     classRoster.remove("A3");
     std::cout << std::endl;
 
