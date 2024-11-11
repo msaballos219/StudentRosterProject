@@ -35,3 +35,22 @@ Student::Student(
     void Student::setAge(int age) { this->age = age; }
     void Student::setDaysToFinish(const std::array<int, 3>& daysToComplete) { this->daysToFinish = daysToComplete; }
     void Student::setDegreeProgram(DegreeProgram degreeProgram) { this->degreeProgram = degreeProgram; }
+
+    void Student::print() const {
+        std::cout << studentID << "\t"
+            << "First Name: " << firstName << "\t"
+            << "Last Name: " << lastName << "\t"
+            << "Age: " << age << "\t"
+            << "daysInCourse: {" << daysToFinish[0] << ", "
+            << daysToFinish[1] << ", "
+            << daysToFinish[2] << "} "
+            << "Degree Program: ";
+
+        // Switch statement to convert the DegreeProgram enum to a string for output.
+        switch (degreeProgram) {
+        case DegreeProgram::SECURITY: std::cout << "Security"; break;
+        case DegreeProgram::NETWORK: std::cout << "Network"; break;
+        case DegreeProgram::SOFTWARE: std::cout << "Software"; break;
+        }
+        std::cout << std::endl;
+    }
