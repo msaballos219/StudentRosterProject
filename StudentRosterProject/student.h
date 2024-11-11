@@ -27,6 +27,15 @@ public:
 		std::array<int, 3> daysToFinish,
 		DegreeProgram degreeProgram);
 
+	// getters
+	std::string getStudentID() const;
+	std::string getFirstName() const;
+	std::string getLastName() const;
+	std::string getEmailAddress() const;
+	int getAge() const;
+	std::array<int, 3> getDaysToFinish() const;
+	DegreeProgram getDegreeProgram() const;
+
 
 };
 
